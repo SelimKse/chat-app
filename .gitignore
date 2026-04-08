@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Build & Dist
+dist/
+build/
+.next
+.nuxt
+out/
+
+# Cache
+.cache/
+.parcel-cache
+.eslintcache
+
+# Temp Files
+tmp/
+temp/
+*.tmp
+
+# OS Files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Docker
+.dockerignore

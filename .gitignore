@@ -29,6 +29,7 @@ lerna-debug.log*
 # Build & Dist
 dist/
 build/
+backend/coverage/
 .next
 .nuxt
 out/

@@ -205,14 +205,8 @@ const userSchema = new mongoose.Schema(
 );
 
 // İndeksler
-userSchema.index({ username: 1 });
-userSchema.index({ "email.address": 1 });
-userSchema.index({ "phone.phoneNumber": 1 });
-userSchema.index({ uuid: 1 });
 userSchema.index({ createdAt: -1 });
-userSchema.index({ "contacts.friends": 1 });
 userSchema.index({ "privacySettings.blockList": 1 });
-userSchema.index({ "referral.referralCode": 1 });
 userSchema.index({ "referral.referredBy": 1 });
 userSchema.index({ "wallet.coins": -1 });
 userSchema.index({ "moderation.ban.isBanned": 1 });

@@ -6,7 +6,8 @@ Express.js tabanlı chat uygulaması backend servisi. Socket.IO ile real-time il
 
 - ✅ JWT tabanlı authentication (Token + Refresh Token)
 - ✅ Real-time mesajlaşma (Socket.IO)
-- ✅ Email ve SMS yapılandırması (Nodemailer + Twilio)
+- ✅ Email yapılandırması (Nodemailer)
+- ✅ Fake SMS log desteği (gerçek gönderim yok)
 - ✅ Security code (OTP) sistemi
 - ✅ Morgan logger
 - ✅ Helmet güvenlik middleware'i
@@ -44,10 +45,8 @@ SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 SMTP_FROM=noreply@chat-app.com
 
-# Twilio (SMS)
-TWILIO_ACCOUNT_SID=your-account-sid
-TWILIO_AUTH_TOKEN=your-auth-token
-TWILIO_PHONE_NUMBER=+1234567890
+# SMS
+# SMS gönderimleri fake modda loglanır, gerçek SMS gönderilmez
 ```
 
 ### 3. Database Bağlantısını Kontrol Et
@@ -155,6 +154,10 @@ backend/
 ### SMTP hataları
 - Gmail için app password kullan (2FA gerekli)
 - Firewall kurallarını kontrol et
+
+### SMS hataları
+- SMS util şu an fake modda çalışır; gerçek SMS provider entegrasyonu yok
+- Konsolda `[FAKE SMS]` logunu görüyorsan akış doğru çalışıyordur
 
 ## 👨‍💻 Geliştirme
 

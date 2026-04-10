@@ -3,11 +3,12 @@ import nodemailer from "nodemailer";
 const getTransporter = () => {
   const port = Number(process.env.SMTP_PORT || 587);
   const secure = String(process.env.SMTP_SECURE || "false") === "true";
+  const smtpPass = process.env.SMTP_PASS || process.env.BREVO_API_KEY;
 
   // Dev mode: SMTP credentials yoksa dev transporter kullan
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !smtpPass) {
     if (process.env.NODE_ENV !== "production") {
-      console.warn("⚠️  SMTP ayarları eksik. Dev mode'da test transporter kullanılıyor.");
+        console.warn("⚠️  SMTP ayarları eksik. Dev mode'da test transporter kullanılıyor.");
       return nodemailer.createTransport({
         host: "localhost",
         port: 1025,
@@ -23,7 +24,7 @@ const getTransporter = () => {
     secure,
     auth: {
       user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      pass: smtpPass,
     },
   });
 };

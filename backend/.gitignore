@@ -27,6 +27,7 @@ yarn-error.log*
 dist/
 build/
 coverage/
+tests/
 
 # Temp files
 tmp/

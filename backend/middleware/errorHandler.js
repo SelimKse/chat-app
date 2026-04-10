@@ -9,6 +9,7 @@ const errorHandler = (err, req, res, next) => {
 
   console.error({
     timestamp: new Date().toISOString(),
+    requestId: req.requestId || null,
     method: req.method,
     path: req.path,
     statusCode,
@@ -19,6 +20,7 @@ const errorHandler = (err, req, res, next) => {
 
   res.status(statusCode).json({
     status: false,
+    requestId: req.requestId || null,
     code,
     message,
     statusCode,

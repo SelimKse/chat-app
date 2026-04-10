@@ -1,5 +1,6 @@
 import express from "express";
 import { protect } from "../middleware/auth.middleware.js";
+import { authLimiter, loginLimiter } from "../middleware/rateLimit.middleware.js";
 
 import {
   changePassword,
@@ -19,12 +20,14 @@ import {
 } from "../controllers/auth.controller.js";
 const router = express.Router();
 
+router.use(authLimiter);
+
 // @route   POST /api/auth/register
 // @desc    Kullanıcı kaydı
 // @access  Public
-router.post("/register", registerUser);
-router.post("/login", loginUser);
 router.get("/me", protect, getCurrentUser);
+router.post("/register", registerUser);
+router.post("/login", loginLimiter, loginUser);
 router.post("/send-verification-code", sendVerificationCode);
 router.post("/verify-phone", verifyPhoneNumber);
 router.post("/send-email-verification-code", sendEmailVerificationCode);

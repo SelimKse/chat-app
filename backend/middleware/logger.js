@@ -13,11 +13,13 @@ morgan.token("status-color", (req, res) => {
   return status;
 });
 
+morgan.token("request-id", (req) => req.requestId || "-");
+
 // Geliştirme ortamı için custom format
-const devFormat = ":method :url :status-color :response-time ms";
+const devFormat = "[:request-id] :method :url :status-color :response-time ms";
 
 // Üretim ortamı için custom format
-const prodFormat = ':remote-addr - ":method :url" :status :response-time ms';
+const prodFormat = ':remote-addr - [":request-id"] ":method :url" :status :response-time ms';
 
 const logger = morgan(process.env.NODE_ENV === "production" ? prodFormat : devFormat);
 

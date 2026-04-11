@@ -25,7 +25,7 @@ function LandingPage() {
         </nav>
 
         <a className="landing-cta landing-cta-ghost" href="#iletisim">
-          Erken erişim al
+          Ürün tanıtımı
         </a>
       </header>
 
@@ -35,15 +35,15 @@ function LandingPage() {
             <div className="landing-kicker">
               <HeroBadge>Türkçe ürün sayfası</HeroBadge>
               <HeroBadge>Chat odaklı platform</HeroBadge>
+              <HeroBadge>Güvenlik öncelikli</HeroBadge>
             </div>
 
-            <h1>Sohbet deneyimini tanıtan, net ve güven veren bir giriş sayfası.</h1>
+            <h1>Hızlı, güvenli ve Türkçe bir sohbet ürünü için canlı bir vitrin.</h1>
 
             <p className="landing-lead">
-              SohbetKök; ekipler, topluluklar ve hızlı iletişim kurmak isteyen
-              kullanıcılar için tasarlanmış modern bir sohbet ürünüdür. Bu
-              sayfa, ürünü kısa ve anlaşılır şekilde tanıtır, ziyaretçiyi doğru
-              aksiyona yönlendirir.
+              SohbetKök; sohbet akışını hızlı başlatan, güvenliği görünür kılan
+              ve ürünün karakterini ilk ekranda hissettiren modern bir chat
+              platformudur. Bu sayfa, ürünü kısa ama etkili biçimde anlatır.
             </p>
 
             <div className="landing-actions">
@@ -51,7 +51,7 @@ function LandingPage() {
                 Ürünü keşfet
               </a>
               <a className="landing-cta landing-cta-secondary" href="#ozellikler">
-                Neler sunduğunu gör
+                Özelliklere bak
               </a>
             </div>
 
@@ -72,25 +72,31 @@ function LandingPage() {
 
               <div className="mock-content">
                 <p className="mock-label">Canlı görünüm</p>
-                <strong>Türkçe karşılama alanı</strong>
+                <strong>Chat ürünü ön izlemesi</strong>
                 <p>
-                  Bu alan daha sonra giriş, kayıt ve sohbet akışlarına açılan
-                  ana köprü olacak.
+                  Katmanlı kartlar, hareketli yüzeyler ve net kontrast ile ürün
+                  hissi daha ilk anda verir.
                 </p>
 
                 <div className="mock-list">
                   <div>
-                    <span>Durum</span>
-                    <strong>Hazır</strong>
+                    <span>Deneyim</span>
+                    <strong>Canlı</strong>
                   </div>
                   <div>
-                    <span>Yön</span>
-                    <strong>Chat odaklı</strong>
+                    <span>Odak</span>
+                    <strong>Mesajlaşma</strong>
                   </div>
                   <div>
-                    <span>Stil</span>
-                    <strong>Modern ve temiz</strong>
+                    <span>Güvenlik</span>
+                    <strong>Yerleşik koruma</strong>
                   </div>
+                </div>
+
+                <div className="mock-pulse-row" aria-label="Ürün sinyalleri">
+                  <span>Kısa gecikme</span>
+                  <span>Net okuma</span>
+                  <span>Güvenli oturum</span>
                 </div>
               </div>
             </div>
@@ -107,17 +113,19 @@ function LandingPage() {
           <SectionCard eyebrow="Ürün" title="SohbetKök ne sunuyor?">
             <p className="landing-copy-block">
               Mesajlaşma, topluluk ve hızlı iletişim akışlarını tek yerde
-              toplayan, sade ama etkili bir kullanıcı deneyimi sunuyoruz.
-              Tasarım dili anlaşılır, yapı ise büyümeye hazır.
+              toplayan, sade ama güçlü bir kullanıcı deneyimi sunuyoruz. Tasarım
+              dili anlaşılır, yapı ise büyümeye hazır.
             </p>
           </SectionCard>
 
-          <SectionCard eyebrow="Kimler için" title="Bu ürün kimlere uygun?">
-            <ul className="landing-trust">
-              <li>Ekip içi hızlı iletişim isteyenler</li>
-              <li>Topluluk ve grup sohbeti yönetenler</li>
-              <li>Türkçe, net ve modern bir chat deneyimi arayanlar</li>
-              <li>Kontrollü şekilde büyüyen bir ürün isteyen ekipler</li>
+          <SectionCard eyebrow="Güvenlik" title="Üründe güven nasıl hissedilir?">
+            <ul className="landing-security-list">
+              {landing.security.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}</strong>
+                  <p>{item.detail}</p>
+                </li>
+              ))}
             </ul>
           </SectionCard>
         </section>
@@ -128,23 +136,25 @@ function LandingPage() {
           ))}
         </section>
 
-        <section className="landing-split" id="akış">
-          <SectionCard eyebrow="Nasıl çalışır" title="Kullanıcı akışı">
-            <ol className="landing-steps">
-              {landing.steps.map((step, index) => (
-                <li key={step}>
-                  <span>{index + 1}</span>
-                  <p>{step}</p>
-                </li>
+        <section className="landing-split" id="guvenlik">
+          <SectionCard eyebrow="Güvenlik" title="Korumayı ürünün içine yerleştirdik">
+            <div className="landing-security-grid">
+              {landing.security.map((item) => (
+                <article key={item.title} className="security-card">
+                  <span />
+                  <strong>{item.title}</strong>
+                  <p>{item.detail}</p>
+                </article>
               ))}
-            </ol>
+            </div>
           </SectionCard>
 
-          <SectionCard eyebrow="Güven" title="Neden bu ürün dikkat çeker">
+          <SectionCard eyebrow="Ürün tonu" title="Neden bu sayfa farklı hissedilir?">
             <ul className="landing-trust">
-              {landing.trustPoints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              <li>Tekrar eden kurumsal kalıplar yerine canlı yüzeyler</li>
+              <li>Görsel hiyerarşi ile kısa sürede ikna eden akış</li>
+              <li>Türkçe, net ve ürüne odaklı mikro metinler</li>
+              <li>Animasyonla desteklenen hafif ama güçlü arayüz</li>
             </ul>
           </SectionCard>
         </section>
@@ -152,7 +162,7 @@ function LandingPage() {
         <section className="landing-footer-card" id="iletisim">
           <div>
             <p className="section-eyebrow">İletişim / erken erişim</p>
-            <h2>İstersen bir sonraki adımda kayıt ve giriş sayfalarını aynı dilde kurarız.</h2>
+            <h2>İstersen bir sonraki adımda giriş ve kayıt ekranlarını da aynı tonda kurarız.</h2>
           </div>
 
           <a className="landing-cta" href="#baslangic">

@@ -3,49 +3,59 @@ export const landing = {
   navigation: [
     { label: 'Ürün', href: '#urun' },
     { label: 'Özellikler', href: '#ozellikler' },
-    { label: 'Nasıl çalışır', href: '#akış' },
-    { label: 'Kime uygun', href: '#kime-uygun' },
+    { label: 'Güvenlik', href: '#guvenlik' },
     { label: 'İletişim', href: '#iletisim' },
   ],
   highlights: [
     'Türkçe ürün dili',
+    'Hızlı mesaj akışı',
     'Modern arayüz',
-    'Mobil uyumlu deneyim',
-    'Gerçek zamanlı mesajlaşma',
+    'Katmanlı güvenlik',
   ],
   stats: [
-    { label: 'Dil', value: 'TR', note: 'Ürün baştan sona Türkçe anlatım' },
-    { label: 'Odak', value: 'Chat', note: 'Mesajlaşma merkezli ana deneyim' },
-    { label: 'Hız', value: 'Anlık', note: 'Gerçek zamanlı akışa uygun yapı' },
-    { label: 'Güncelleme', value: 'Sürekli', note: 'Küçük ve güvenli sürümler' },
+    { label: 'Mesaj akışı', value: 'Anlık', note: 'Gerçek zamanlı iletişim hissi' },
+    { label: 'Dil', value: 'TR', note: 'Türkçe ürün dili ve mikro metinler' },
+    { label: 'Deneyim', value: 'Temiz', note: 'Sade ama dikkat çekici arayüz' },
+    { label: 'Koruma', value: 'Yüksek', note: 'Oturum ve veri güvenliği odağı' },
   ],
   features: [
     {
-      title: 'Ürünü tek bakışta anlatır',
+      title: 'Sohbeti hızlı başlatır',
       detail:
-        'Ziyaretçi ilk ekranda ne sunduğunu, kime hitap ettiğini ve neden önemli olduğunu hemen görür.',
+        'Kullanıcı ilk bakışta ne yapacağını anlar, karmaşa olmadan doğrudan sohbete geçer.',
     },
     {
-      title: 'Güçlü bir ilk izlenim kurar',
+      title: 'Türkçe ve net bir ürün dili taşır',
       detail:
-        'Hero alanı, fayda blokları ve güven mesajları tek bir akışta birleşir.',
+        'Mikro metinler, butonlar ve başlıklar yerel kullanım alışkanlıklarına göre sade tutulur.',
     },
     {
-      title: 'Sonraki ekranlara zemin hazırlar',
+      title: 'Mobilde de akıcı kalır',
       detail:
-        'Bu landing sayfası auth, kayıt ve ürün içi ekranlar için tutarlı bir dil oluşturur.',
+        'Kart yapısı ve boşluk sistemi küçük ekranlarda da anlaşılır ve dengeli görünür.',
+    },
+    {
+      title: 'Canlı his veren yapı kurar',
+      detail:
+        'Hafif geçişler ve katmanlı yüzeyler ürünün statik değil, yaşayan bir deneyim olduğunu hissettirir.',
     },
   ],
-  steps: [
-    'Landing sayfası ürün hikayesini anlatır',
-    'Kullanıcı CTA ile kayıt ya da girişe yönlenir',
-    'Güven ve fayda blokları ikna sürecini destekler',
-    'Sonraki adımda auth ve chat ekranları bağlanır',
-  ],
-  trustPoints: [
-    'Net ürün mesajı',
-    'Responsive ve sade yapı',
-    'İşlev odaklı CTA düzeni',
-    'Her güncelleme GitHub’a pushlanır',
+  security: [
+    {
+      title: 'Oturum kontrolü',
+      detail: 'Giriş ve token akışları güvenli sınırlar içinde tutulur.',
+    },
+    {
+      title: 'Veri koruma',
+      detail: 'Mesaj ve kullanıcı verileri yetki katmanlarına göre ayrılır.',
+    },
+    {
+      title: 'Rate limit ve denetim',
+      detail: 'Saldırı, spam ve gereksiz istekleri azaltan koruma mantığı vardır.',
+    },
+    {
+      title: 'Sürüm disiplini',
+      detail: 'Her güncelleme küçük parçalara ayrılır ve kontrollü şekilde yayınlanır.',
+    },
   ],
 }

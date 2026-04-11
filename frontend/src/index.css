@@ -884,6 +884,12 @@ ul {
   color: var(--text-secondary);
 }
 
+.landing-copy-block {
+  color: var(--text-secondary);
+  max-width: 58ch;
+  margin-top: 8px;
+}
+
 .landing-split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

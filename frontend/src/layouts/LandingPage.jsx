@@ -25,7 +25,7 @@ function LandingPage() {
         </nav>
 
         <a className="landing-cta landing-cta-ghost" href="#iletisim">
-          Demo iste
+          Erken erişim al
         </a>
       </header>
 
@@ -33,24 +33,25 @@ function LandingPage() {
         <section className="landing-hero">
           <div className="landing-hero-copy">
             <div className="landing-kicker">
-              <HeroBadge>Türkçe başlangıç sayfası</HeroBadge>
-              <HeroBadge>Layout-first mimari</HeroBadge>
+              <HeroBadge>Türkçe ürün sayfası</HeroBadge>
+              <HeroBadge>Chat odaklı platform</HeroBadge>
             </div>
 
-            <h1>Mesajlaşma ürününü sade, güçlü ve Türkçe bir girişle başlat.</h1>
+            <h1>Sohbet deneyimini tanıtan, net ve güven veren bir giriş sayfası.</h1>
 
             <p className="landing-lead">
-              SohbetKök, kullanıcıyı ilk saniyede yakalayan, mobilde temiz duran
-              ve sonrasında auth ile chat ekranlarına doğal şekilde açılan bir
-              ana sayfa ile başlar.
+              SohbetKök; ekipler, topluluklar ve hızlı iletişim kurmak isteyen
+              kullanıcılar için tasarlanmış modern bir sohbet ürünüdür. Bu
+              sayfa, ürünü kısa ve anlaşılır şekilde tanıtır, ziyaretçiyi doğru
+              aksiyona yönlendirir.
             </p>
 
             <div className="landing-actions">
               <a className="landing-cta" href="#iletisim">
-                Hemen başla
+                Ürünü keşfet
               </a>
               <a className="landing-cta landing-cta-secondary" href="#ozellikler">
-                Özellikleri gör
+                Neler sunduğunu gör
               </a>
             </div>
 
@@ -102,6 +103,25 @@ function LandingPage() {
           ))}
         </section>
 
+        <section className="landing-split" id="urun">
+          <SectionCard eyebrow="Ürün" title="SohbetKök ne sunuyor?">
+            <p className="landing-copy-block">
+              Mesajlaşma, topluluk ve hızlı iletişim akışlarını tek yerde
+              toplayan, sade ama etkili bir kullanıcı deneyimi sunuyoruz.
+              Tasarım dili anlaşılır, yapı ise büyümeye hazır.
+            </p>
+          </SectionCard>
+
+          <SectionCard eyebrow="Kimler için" title="Bu ürün kimlere uygun?">
+            <ul className="landing-trust">
+              <li>Ekip içi hızlı iletişim isteyenler</li>
+              <li>Topluluk ve grup sohbeti yönetenler</li>
+              <li>Türkçe, net ve modern bir chat deneyimi arayanlar</li>
+              <li>Kontrollü şekilde büyüyen bir ürün isteyen ekipler</li>
+            </ul>
+          </SectionCard>
+        </section>
+
         <section className="landing-grid" id="ozellikler">
           {landing.features.map((feature) => (
             <FeatureCard key={feature.title} {...feature} />
@@ -109,7 +129,7 @@ function LandingPage() {
         </section>
 
         <section className="landing-split" id="akış">
-          <SectionCard eyebrow="Nasıl ilerliyoruz" title="İlk sürüm akışı">
+          <SectionCard eyebrow="Nasıl çalışır" title="Kullanıcı akışı">
             <ol className="landing-steps">
               {landing.steps.map((step, index) => (
                 <li key={step}>
@@ -120,7 +140,7 @@ function LandingPage() {
             </ol>
           </SectionCard>
 
-          <SectionCard eyebrow="Güven" title="Neden bu yapı doğru">
+          <SectionCard eyebrow="Güven" title="Neden bu ürün dikkat çeker">
             <ul className="landing-trust">
               {landing.trustPoints.map((item) => (
                 <li key={item}>{item}</li>
@@ -131,12 +151,12 @@ function LandingPage() {
 
         <section className="landing-footer-card" id="iletisim">
           <div>
-            <p className="section-eyebrow">İletişim / başlangıç</p>
-            <h2>Bir sonraki adım: auth ekranı ve ilk gerçek kullanıcı akışı.</h2>
+            <p className="section-eyebrow">İletişim / erken erişim</p>
+            <h2>İstersen bir sonraki adımda kayıt ve giriş sayfalarını aynı dilde kurarız.</h2>
           </div>
 
           <a className="landing-cta" href="#baslangic">
-            Yukarı dön
+            Yukarı çık
           </a>
         </section>
       </main>

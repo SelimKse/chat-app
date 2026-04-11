@@ -99,7 +99,7 @@
 
 ### 5. Ekranlar
 
-- [ ] Landing / giriş ekranı
+- [x] Landing / giriş ekranı
 - [ ] Login / register ekranları
 - [ ] OTP / verification ekranları
 - [ ] Chat listesi

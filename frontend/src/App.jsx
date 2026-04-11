@@ -1,8 +1,7 @@
-import AppShell from './layouts/AppShell'
-import { dashboard } from './data/dashboard'
+import LandingPage from './layouts/LandingPage'
 
 function App() {
-  return <AppShell dashboard={dashboard} />
+  return <LandingPage />
 }
 
 export default App
